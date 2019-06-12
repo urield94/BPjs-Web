@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <title>Hanoi</title>
+    <LINK type="text/css" REL="stylesheet" HREF="style.css">
+    <script src="../BPjs_runner.js"></script>
+    <script src="js/Hanoi.js"></script>
+    <script src="js/Display.js"></script>
+    <script src="js/Animation.js"></script>
+    <script src="js/Controller.js"></script>
+    <script src="js/bThreads.js"></script>
+</HEAD>
+
+<body onload="init()">
+<div id="wrapper">
+    <h2>The Towers of Hanoi</h2>
+
+    <table>
+        <tr id="gameTableRow"></tr>
+    </table>
+    <form name="disp">
+        <label>
+            <textarea name="message" rows="2" cols="42"></textarea>
+        </label>
+
+        <label>
+            <br> Disks:
+            <select onchange="restart(start_pole);" name="disc" size="1">
+                <option selected="">3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+            </select>
+        </label>
+
+        <label>
+            Start:
+            <select onchange="change_start_pole()" name="start_select" size="1">
+                <option>1</option>
+                <option selected="">2</option>
+                <option>3</option>
+            </select>
+        </label>
+        <input type="button" value="Solve It!"
+               onclick="hanoi_solve(disks, start_pole, end_pole)">
+        <br> <br>
+        <input type="button" value="RESTART" onclick="restart(start_pole);">
+
+    </form>
+</div>
+</body>
+</HTML>
+

@@ -1,0 +1,14 @@
+#wrapper {
+  width: 493px;
+  border: black 3px double;
+}
+
+body{
+  margin: 5% 25%;
+  text-align: center;
+}
+
+textarea{
+  resize: none;
+}
+
